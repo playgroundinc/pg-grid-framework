@@ -21,6 +21,18 @@ All direct children of a `.grid-container` element automatically become grid col
 
 `.grid-column-order-{ $number }` - If you would like to change the order of your columns, we've got some utility classes for you! You can also target specific breakpoints with this class like `.grid-lg-column-order-5` or `.grid-xl-column-order-1`. Also available are `.grid-column-order-first` which will set the order property to `-1` and `.grid-column-order-last` which will set the order to the grid column number, plus 1 (default is 26).
 
+## Breakpoints
+
+| name | min-width (px) |
+| --- | --- |
+| xs | 420 |
+| sm | 544 |
+| md | 768 |
+| lg | 996 |
+| xl | 1200 |
+| xxl | 1920 |
+
+If you'd like to customize these, change the values in the `grid.scss` file and recompile.
 
 ## FAQs
 
