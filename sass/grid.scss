@@ -36,7 +36,7 @@ $bps: ( 'xs', 420 ),
       order: -1;
     }
     .grid-#{$classname}-column-order-last {
-      order: 100;
+      order: $columns + 1;
     }
     @for $i from 1 through $columns {
       .grid-#{$classname}-column-order-#{$i} {
@@ -48,7 +48,7 @@ $bps: ( 'xs', 420 ),
       order: -1;
     }
     .grid-column-order-last {
-      order: 100;
+      order: $columns + 1;
     }
     @for $i from 1 through $columns {
       .grid-column-order-#{$i} {

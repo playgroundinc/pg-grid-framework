@@ -308,7 +308,7 @@
 }
 
 .grid-column-order-last {
-  order: 100;
+  order: 26;
 }
 
 .grid-column-order-1 {
@@ -717,7 +717,7 @@
   }
 
   .grid-xs-column-order-last {
-    order: 100;
+    order: 26;
   }
 
   .grid-xs-column-order-1 {
@@ -1126,7 +1126,7 @@
   }
 
   .grid-sm-column-order-last {
-    order: 100;
+    order: 26;
   }
 
   .grid-sm-column-order-1 {
@@ -1535,7 +1535,7 @@
   }
 
   .grid-md-column-order-last {
-    order: 100;
+    order: 26;
   }
 
   .grid-md-column-order-1 {
@@ -1944,7 +1944,7 @@
   }
 
   .grid-lg-column-order-last {
-    order: 100;
+    order: 26;
   }
 
   .grid-lg-column-order-1 {
@@ -2353,7 +2353,7 @@
   }
 
   .grid-xl-column-order-last {
-    order: 100;
+    order: 26;
   }
 
   .grid-xl-column-order-1 {
@@ -2762,7 +2762,7 @@
   }
 
   .grid-xxl-column-order-last {
-    order: 100;
+    order: 26;
   }
 
   .grid-xxl-column-order-1 {
