@@ -1,0 +1,107 @@
+$columns: 25;
+$bps: ( 'xs', 420 ),
+      ( 'sm', 544 ),
+      ( 'md', 768 ),
+      ( 'lg', 996 ),
+      ( 'xl', 1200 ),
+      ( 'xxl', 1920 );
+
+@mixin makeGrid($bps) {
+  @include generateGridColumnStarts();
+  @include generateGridColumnSpans();
+  @include generateGridColumnOrders();
+  @each $classname, $width in $bps {
+    @if $width {
+      @media screen and (min-width: #{$width}px) {
+        @include generateGridColumnStarts($classname);
+        @include generateGridColumnSpans($classname);
+        @include generateGridColumnOrders($classname);
+      }
+    }
+  }
+}
+
+@mixin makeSubGrid() {
+  @for $i from 1 through $columns {
+    .grid-columns-#{$i} {
+      grid-template-columns: repeat(#{$i}, 1fr);
+    }
+  }
+}
+
+@mixin generateGridColumnOrders($classname: null) {
+
+  @if $classname {
+    .grid-#{$classname}-column-order-first {
+      order: -1;
+    }
+    .grid-#{$classname}-column-order-last {
+      order: 100;
+    }
+    @for $i from 1 through $columns {
+      .grid-#{$classname}-column-order-#{$i} {
+        order: $i;
+      }
+    }
+  } @else {
+    .grid-column-order-first {
+      order: -1;
+    }
+    .grid-column-order-last {
+      order: 100;
+    }
+    @for $i from 1 through $columns {
+      .grid-column-order-#{$i} {
+        order: $i;
+      }
+    }
+  }
+  
+}
+
+// $classname is the breakpoint class that gets passed from 'makeGrid'
+@mixin generateGridColumnStarts($classname: null) {
+  @if $classname {
+    @for $i from 1 through $columns {
+      .grid-#{$classname}-start-#{$i} {
+        grid-column-start: $i;
+      }
+      .grid-#{$classname}-end-#{$i} {
+        grid-column-start: $i * -1;
+      }
+    }
+  } @else {
+    @for $i from 1 through $columns {
+      .grid-start-#{$i} {
+        grid-column-start: $i;
+      }
+      .grid-end-#{$i} {
+        grid-column-end: $i * -1;
+      }
+    }
+  }
+}
+
+@mixin generateGridColumnSpans($classname: null) {
+  @if $classname {
+    @for $i from 1 through $columns {
+      .grid-#{$classname}-span-#{$i} {
+        grid-column-end: span $i;
+      }
+    }
+  } @else {
+    @for $i from 1 through $columns {
+      .grid-span-#{$i} {
+        grid-column-end: span $i;
+      }
+    }
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(#{$columns}, 1fr);
+}
+
+@include makeGrid($bps);
+@include makeSubGrid();

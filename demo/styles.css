@@ -1,0 +1,24 @@
+.text-center {
+  text-align: center;
+}
+
+.box {
+  padding-bottom: 56.25%;
+  background-color: red;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.box span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+}
+
+.row {
+  background-color: red;
+  height: 40px;
+  margin-bottom: 2rem;
+}

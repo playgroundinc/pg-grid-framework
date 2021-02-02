@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Demo</title>
+  <link rel="stylesheet" href="../css/grid.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="grid-container">
+    <h1 class="grid-span-23 grid-start-2 text-center">PG Grid Framework</h1>
+  </div>
+
+  <div class="grid-container">
+    <h2 class="grid-span-23 grid-start-2 text-center">Basic Columnns</h2>
+    <h3 class="grid-span-23 grid-start-2 text-center">2 columns</h3>
+    <div class="grid-span-11 grid-start-2">
+      <div class="box"></div>
+    </div>
+    <div class="grid-span-11 grid-start-14">
+      <div class="box"></div>
+    </div>
+  </div>
+
+  <div class="grid-container">
+    <h3 class="grid-span-23 grid-start-2 text-center">3 columns</h3>
+    <div class="grid-span-7 grid-start-2">
+      <div class="box"></div>
+    </div>
+    <div class="grid-span-7 grid-start-10">
+      <div class="box"></div>
+    </div>
+    <div class="grid-span-7 grid-start-18">
+      <div class="box"></div>
+    </div>
+  </div>
+
+  <div class="grid-container">
+    <h3 class="grid-span-23 grid-start-2 text-center">4 columns</h3>
+    <div class="grid-span-5 grid-start-2">
+      <div class="box"></div>
+    </div>
+    <div class="grid-span-5 grid-start-8">
+      <div class="box"></div>
+    </div>
+    <div class="grid-span-5 grid-start-14">
+      <div class="box"></div>
+    </div>
+    <div class="grid-span-5 grid-start-20">
+      <div class="box"></div>
+    </div>
+  </div>
+
+  <div class="grid-container">
+    <h2 class="grid-span-23 grid-start-2 text-center">Responsive Columnns</h2>
+    <h3 class="grid-span-23 grid-start-2 text-center">2 columns</h3>
+    <div class="grid-span-23 grid-start-2 grid-md-span-11">
+      <div class="box"></div>
+    </div>
+    <div class="grid-span-23 grid-start-2 grid-md-span-11 grid-md-start-14">
+      <div class="box"></div>
+    </div>
+  </div>
+  
+  <div class="grid-container">
+    <h3 class="grid-span-23 grid-start-2 text-center">3 columns</h3>
+    <div class="grid-span-23 grid-start-2 grid-lg-span-7">
+      <div class="box"></div>
+    </div>
+    <div class="grid-span-23 grid-start-2 grid-md-span-11 grid-lg-span-7 grid-lg-start-10">
+      <div class="box"></div>
+    </div>
+    <div class="grid-span-23 grid-start-2 grid-md-span-11 grid-md-start-14 grid-lg-span-7 grid-lg-start-18">
+      <div class="box"></div>
+    </div>
+  </div>
+  
+  <div class="grid-container">
+    <h3 class="grid-span-23 grid-start-2 text-center">4 columns</h3>
+
+    <div class="grid-span-23 grid-start-2 grid-md-span-11 grid-lg-span-5">
+      <div class="box"></div>
+    </div>
+    <div class="grid-span-23 grid-start-2 grid-md-span-11 grid-md-start-14 grid-lg-span-5 grid-lg-start-8">
+      <div class="box"></div>
+    </div>
+    <div class="grid-span-23 grid-start-2 grid-md-span-11 grid-md-start-2 grid-lg-span-5 grid-lg-start-14">
+      <div class="box"></div>
+    </div>
+    <div class="grid-span-23 grid-start-2 grid-md-span-11 grid-md-start-14 grid-lg-span-5 grid-lg-start-20">
+      <div class="box"></div>
+    </div>
+  </div>
+
+  <div class="grid-container">
+    <h3 class="grid-span-23 grid-start-2 text-center">Grid Order</h3>
+  
+    <div class="grid-span-23 grid-start-2 grid-md-span-11 grid-column-order-md-2 grid-lg-start-20 grid-lg-span-5 grid-lg-column-order-4">
+      <div class="box"><span>1</span></div>
+    </div>
+    <div class="grid-start-2 grid-span-23 grid-md-start-14 grid-md-span-11 grid-column-order-md-3 grid-lg-span-5 grid-lg-start-14 grid-lg-column-order-3">
+      <div class="box"><span>2</span></div>
+    </div>
+    <div class="grid-span-23 grid-start-2 grid-md-span-11 grid-md-start-2 grid-lg-span-5 grid-lg-start-8 grid-lg-column-order-2">
+      <div class="box"><span>3</span></div>
+    </div>
+    <div class="grid-span-23 grid-start-2 grid-md-span-11 grid-md-start-14 grid-lg-span-5 grid-lg-start-2 grid-lg-column-order-1">
+      <div class="box"><span>4</span></div>
+    </div>
+  </div>
+
+  <div class="grid-container">
+    <h3 class="grid-span-23 grid-start-2 text-center">Nested Grid</h3>
+    <div class="grid-start-4 grid-end-4 grid-container grid-columns-19">
+      <div class="box grid-span-19"></div>
+      <p class="grid-start-2 grid-end-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis eius deleniti sunt accusamus, dolorem earum blanditiis est adipisci perferendis eum exercitationem doloremque, velit nostrum, iure vitae natus esse quidem ipsa.</p>
+    </div>
+  </div>
+
+  <div class="grid-container">
+    <h2 class="grid-span-23 grid-start-2 text-center">25 Columnns!</h2>
+    <div class="grid-start-2 grid-span-21">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-24 grid-span-1">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-2 grid-span-20">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-23 grid-span-2">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-2 grid-span-19">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-22 grid-span-3">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-2 grid-span-18">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-21 grid-span-4">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-2 grid-span-17">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-20 grid-span-5">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-2 grid-span-16">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-19 grid-span-6">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-2 grid-span-15">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-18 grid-span-7">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-2 grid-span-14">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-17 grid-span-8">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-2 grid-span-13">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-16 grid-span-9">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-2 grid-span-12">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-15 grid-span-10">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-2 grid-span-11">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-14 grid-span-11">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-2 grid-span-10">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-13 grid-span-12">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-2 grid-span-9">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-12 grid-span-13">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-2 grid-span-8">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-11 grid-span-14">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-2 grid-span-7">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-10 grid-span-15">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-2 grid-span-6">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-9 grid-span-16">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-2 grid-span-5">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-8 grid-span-17">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-2 grid-span-4">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-7 grid-span-18">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-2 grid-span-3">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-6 grid-span-19">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-2 grid-span-2">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-5 grid-span-20">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-2 grid-span-1">
+      <div class="row"></div>
+    </div>
+    <div class="grid-start-4 grid-span-21">
+      <div class="row"></div>
+    </div>
+  </div>
+
+</body>
+</html>
