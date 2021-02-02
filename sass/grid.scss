@@ -1,4 +1,4 @@
-$columns: 25;
+$columns: 12;
 $bps: ( 'xs', 420 ),
       ( 'sm', 544 ),
       ( 'md', 768 ),
@@ -101,6 +101,9 @@ $bps: ( 'xs', 420 ),
 .grid-container {
   display: grid;
   grid-template-columns: repeat(#{$columns}, 1fr);
+  column-gap: 4vw;
+  padding-left: 4vw;
+  padding-right: 4vw;
 }
 
 @include makeGrid($bps);
