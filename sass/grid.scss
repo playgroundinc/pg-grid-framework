@@ -107,7 +107,9 @@ $bps: ( 'xs', 420 ),
 }
 
 .grid-container {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: (0)[#{$columns - 1}];
   grid-template-columns: repeat(#{$columns - 1}, 0);
   width: 92%;
   column-gap: 4vw;
