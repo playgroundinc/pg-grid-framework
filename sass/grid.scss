@@ -24,7 +24,9 @@ $bps: ( 'xs', 420 ),
 @mixin makeSubGrid() {
   @for $i from 1 through $columns {
     .grid-columns-#{$i} {
-      grid-template-columns: repeat(#{$i}, 1fr);
+      grid-template-columns: repeat(#{$i + 1},0);
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 }
@@ -62,6 +64,9 @@ $bps: ( 'xs', 420 ),
 // $classname is the breakpoint class that gets passed from 'makeGrid'
 @mixin generateGridColumnStarts($classname: null) {
   @if $classname {
+    .grid-#{ $classname }-start-auto {
+      grid-column-start: auto;
+    }
     @for $i from 1 through $columns {
       .grid-#{$classname}-start-#{$i} {
         grid-column-start: $i;
@@ -71,6 +76,9 @@ $bps: ( 'xs', 420 ),
       }
     }
   } @else {
+    .grid-start-auto {
+      grid-column-start: auto;
+    }
     @for $i from 1 through $columns {
       .grid-start-#{$i} {
         grid-column-start: $i;
@@ -100,7 +108,11 @@ $bps: ( 'xs', 420 ),
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(#{$columns}, 1fr);
+  grid-template-columns: repeat(#{$columns - 1}, 0);
+  width: 92%;
+  column-gap: 4vw;
+  padding-left: 4%;
+  padding-right: 4%;
 }
 
 @include makeGrid($bps);
