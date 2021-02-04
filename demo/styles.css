@@ -1,12 +1,32 @@
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 10vw;
+  color: white;
+  background-color:#1d2630;
+  font-family: 'Lexend Mega', sans-serif;
+  font-size: 1.8rem;
+}
+
 .text-center {
   text-align: center;
 }
 
 .box {
-  padding-bottom: 56.25%;
-  background-color: red;
-  margin-bottom: 2rem;
+  /* padding-bottom: 56.25%; */
+  background-color: mediumvioletred;
+  background-image: linear-gradient(to bottom, mediumslateblue, hotpink);
   position: relative;
+  height: 20vmax;
+  border-radius: 4px;
+}
+
+.debug {
+  background-color: linear-gradient(to bottom, mediumslateblue, hotpink);
 }
 
 .box span {
@@ -22,3 +42,18 @@
   height: 40px;
   margin-bottom: 2rem;
 }
+
+h1 {
+  font-size: 5.5rem;
+}
+
+h2 {
+  margin-bottom: 0;
+  font-size: 3.6rem;
+}
+
+h3 {
+  margin-bottom: 0;
+  font-size: 2.8rem;
+}
+
