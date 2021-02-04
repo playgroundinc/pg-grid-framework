@@ -19,14 +19,34 @@ body {
 .box {
   /* padding-bottom: 56.25%; */
   background-color: mediumvioletred;
-  background-image: linear-gradient(to bottom, mediumslateblue, hotpink);
+  background-attachment: fixed;
   position: relative;
   height: 20vmax;
   border-radius: 4px;
 }
 
-.debug {
-  background-color: linear-gradient(to bottom, mediumslateblue, hotpink);
+.bg-pb {
+  background-image: linear-gradient(to bottom,mediumvioletred, mediumslateblue);
+}
+
+.bg-bp {
+  background-image: linear-gradient(to bottom, mediumslateblue,mediumvioletred);
+}
+
+.bg-yg {
+  background-image: linear-gradient(to bottom, #ffff5c, limegreen);
+}
+
+.bg-gy {
+  background-image: linear-gradient(to bottom, limegreen, #ffff5c);
+}
+
+.bg-bc {
+  background-image: linear-gradient(to bottom,cyan, royalblue);
+}
+
+.bg-cb {
+  background-image: linear-gradient(to bottom, royalblue ,cyan);
 }
 
 .box span {
@@ -56,4 +76,3 @@ h3 {
   margin-bottom: 0;
   font-size: 2.8rem;
 }
-
