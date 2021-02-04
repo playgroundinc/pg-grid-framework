@@ -2,12 +2,14 @@
 
 This is a mobile-first, classname-based grid framework built on CSS Grid.
 
+View the demo here: https://elated-newton-88619b.netlify.app/demo/
+
 ## Grid Containers
 
 `.grid-container` - Add the class of  to any elements to turn it into a 25-column grid.
 Any direct children of that element will be the grid columns.
 
-`.grid-colums-{ $number }` - You can overwrite the number of columns that the grid can have by adding a class like `.grid-columns-16` along with the `.grid-container` class. The maximum nunmber of columns you can have is set by the `$columns` variable (25 by default). This is especially useful if you come into a scenario and you want to nest a grid inside another.
+`.grid-columns-{ $number }` - You can overwrite the number of columns that the grid can have by adding a class like `.grid-columns-16` along with the `.grid-container` class. This is especially useful if you come into a scenario and you want to nest a grid inside another. The maximum nunmber of columns you can have is set by the `$columns` variable (25 by default). 
 
 ## Grid Columns
 
@@ -17,7 +19,9 @@ All direct children of a `.grid-container` element automatically become grid col
 
 `.grid-column-end-{ $number }` - Determines which grid line an element ends on. You can also target specific breakpoints with this class like `.grid-lg-column-end-20` or `.grid-xl-column-end-20`.
 
-`.grid-column-span-{ $number }` - Determines how many grid columns an element spans. You can also target specific breakpoints with this class like `.grid-lg-column-span-5` or `.grid-xl-column-span-10`.
+`.grid-column-span-{ $number }` - Determines how many grid columns an element spans. You can also target specific breakpoints with this class like `.grid-lg-column-span-5` or `.grid-xl-column-span-10`. Uses the `grid-column-end` property to set the span.
+
+`.grid-column-span-start-{ $number }` - Determines how many grid columns an element spans. You can also target specific breakpoints with this class like `.grid-lg-column-span-5` or `.grid-xl-column-span-10`. Uses the `grid-column-start` property to set the span.
 
 `.grid-column-order-{ $number }` - If you would like to change the order of your columns, we've got some utility classes for you! You can also target specific breakpoints with this class like `.grid-lg-column-order-5` or `.grid-xl-column-order-1`. Also available are `.grid-column-order-first` which will set the order property to `-1` and `.grid-column-order-last` which will set the order to the grid column number, plus 1 (default is 26).
 
