@@ -10,23 +10,35 @@ $bps: ( 'xs', 420 ),
   @include generateGridColumnStarts();
   @include generateGridColumnSpans();
   @include generateGridColumnOrders();
+  @include makeSubGrid();
   @each $classname, $width in $bps {
     @if $width {
       @media screen and (min-width: #{$width}px) {
         @include generateGridColumnStarts($classname);
         @include generateGridColumnSpans($classname);
         @include generateGridColumnOrders($classname);
+        @include makeSubGrid($classname);
       }
     }
   }
 }
 
-@mixin makeSubGrid() {
-  @for $i from 1 through $columns {
-    .grid-columns-#{$i} {
-      grid-template-columns: repeat(#{$i}, 1fr);
+@mixin makeSubGrid($classname: null) {
+
+  @if $classname {
+    @for $i from 1 through $columns {
+      .grid-#{$classname}-columns-#{$i} {
+        grid-template-columns: repeat(#{$i}, 1fr);
+      }
+    }
+  } @else {
+    @for $i from 1 through $columns {
+      .grid-columns-#{$i} {
+        grid-template-columns: repeat(#{$i}, 1fr);
+      }
     }
   }
+  
 }
 
 @mixin generateGridColumnOrders($classname: null) {
@@ -109,7 +121,10 @@ $bps: ( 'xs', 420 ),
   grid-template-columns: repeat(#{$columns}, 1fr);
   row-gap: 4vw;
   margin-top: 8vw;
+
+  .grid-container {
+    margin-top: 0;
+  }
 }
 
 @include makeGrid($bps);
-@include makeSubGrid();

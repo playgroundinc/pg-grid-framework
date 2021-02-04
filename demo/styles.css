@@ -25,6 +25,10 @@ body {
   border-radius: 4px;
 }
 
+.box--sm {
+  height: 8vmax;
+}
+
 .bg-pb {
   background-image: linear-gradient(to bottom,mediumvioletred, mediumslateblue);
 }
@@ -47,6 +51,14 @@ body {
 
 .bg-cb {
   background-image: linear-gradient(to bottom, royalblue ,cyan);
+}
+
+.bg-oy {
+  background-image: linear-gradient(to bottom, tomato, #ffff5c);
+}
+
+.bg-yo {
+  background-image: linear-gradient(to bottom, #ffff5c, tomato);
 }
 
 .box span {
